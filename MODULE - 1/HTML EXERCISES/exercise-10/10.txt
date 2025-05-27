@@ -1,0 +1,52 @@
+Objective:
+Practice using Chrome DevTools and VS Code features to:
+
+Inspect layout elements
+
+Modify styles live
+
+View console errors and logs
+
+Add breakpoints to JavaScript code
+
+Watch variable values during script execution
+Steps to Debug Using Chrome DevTools:
+1. Open DevTools:
+Right-click anywhere on the page and select "Inspect" or press Ctrl + Shift + I (Windows) / Cmd + Option + I (Mac)
+
+2. Use "Elements" Tab:
+Check the layout structure.
+
+You can modify styles live here. Try changing padding, color, font-size, etc.
+
+Example: Change the header background color.
+
+3. Use "Console" Tab:
+Click the button on the page ("Click Me") and check the console.
+
+You’ll see:
+
+Uncaught TypeError: output.textCont is undefined
+
+Uncaught ReferenceError: console is not defined
+
+These errors help you identify the bugs in the script.
+
+4. Use "Sources" Tab:
+Open the script section.
+
+Set a breakpoint on the line inside showMessage() and the add() function.
+
+Click the button again and step through the code using "Step Over" and "Step Into" controls.
+
+5. Check "Network" Tab (Optional):
+Shows that the image missing.jpg was not found (404 error).
+
+Can be used to test whether resources like CSS or JS are loading correctly.
+
+6. Use VS Code (Optional):
+Open this HTML file in VS Code.
+
+Hover over variables to inspect types and values.
+
+Use the built-in Live Server extension for live preview and console integration.
