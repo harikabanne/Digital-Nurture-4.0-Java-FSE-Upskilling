@@ -1,0 +1,20 @@
+/* Text color using HEX */
+h2 {
+  color: #2e8b57;
+}
+
+/* Background color using RGBA */
+body {
+  background-color: rgba(240, 248, 255, 0.8);
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Gradient background for section headers */
+section h2 {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
