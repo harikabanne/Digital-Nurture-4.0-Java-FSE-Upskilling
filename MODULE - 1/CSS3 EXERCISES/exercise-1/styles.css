@@ -10,13 +10,3 @@ p {
   line-height: 1.5;
   color: #333333;
 }
-/* Navigation links */
-nav a {
-  color: #264653;
-  text-decoration: none;
-  margin-right: 15px;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
