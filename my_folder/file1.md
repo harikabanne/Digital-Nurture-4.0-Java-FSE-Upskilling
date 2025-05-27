@@ -1,0 +1,2 @@
+SELECT * FROM TABLE1 
+WHERE file > 1;
