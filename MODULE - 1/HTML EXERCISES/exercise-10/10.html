@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Debugging Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+        }
+
+        .content {
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Welcome to the Event Portal</h1>
+    </div>
+
+    <div class="content">
+        <p>This is a <span class="highlight">sample</span> page for debugging layout and JavaScript errors.</p>
+
+        <button onclick="showMessage()">Click Me</button>
+        <p id="output"></p>
+
+        <img src="missing.jpg" alt="Image not found" width="200">
+
+        <p>Resize the window to see how layout behaves.</p>
+    </div>
+
+    <div class="footer">
+        <p>Event Portal &copy; 2025</p>
+    </div>
+</div>
+
+<script>
+    function showMessage() {
+        let output = document.getElementById("output");
+        output.textCont = "Button clicked!"; // Intentional bug: should be textContent
+        console.logg("This message will appear in console"); // Intentional bug: wrong method name
+    }
+
+    // Another issue: typo in function
+    function add(x, y) {
+        return x + z; // z is undefined
+    }
+
+    let result = add(5, 3);
+</script>
+
+</body>
+</html>
