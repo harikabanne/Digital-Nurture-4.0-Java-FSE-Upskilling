@@ -1,0 +1,65 @@
+Exercise 19.1: Set up a Bootstrap 5 project with Sass using npm
+Initialize project:
+mkdir bootstrap-sass-project
+cd bootstrap-sass-project
+npm init -y
+Install Bootstrap and Sass:
+
+npm install bootstrap sass
+Create custom.scss file inside scss/:
+// scss/custom.scss
+// Import functions and variables first
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// Override variables before full Bootstrap import (next exercise)
+
+// Import the rest of Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+Compile Sass to CSS:
+npx sass scss/custom.scss dist/css/custom.css
+Create index.html:
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap with Sass</title>
+  <link rel="stylesheet" href="dist/css/custom.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-primary">Hello, Bootstrap Sass!</h1>
+    <button class="btn btn-primary">Click Me</button>
+  </div>
+</body>
+</html>
+Exercise 19.2: Customize primary colors and border radius via _variables.scss and recompile Bootstrap
+Create a new file scss/_custom-variables.scss
+// scss/_custom-variables.scss
+$primary: #e91e63; // Pink
+$border-radius: 1rem; // Large rounded corners
+Update your custom.scss to include the new file before Bootstrap imports:
+// scss/custom.scss
+@import "../node_modules/bootstrap/scss/functions";
+@import "custom-variables"; // Your overrides
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// Import full Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+Recompile the SCSS:
+npx sass scss/custom.scss dist/css/custom.css
+Update or reuse index.html
+You will now see pink (#e91e63) buttons and a larger border radius.
+You can automate Sass compilation using a script in package.json:
+"scripts": {
+  "build-css": "sass scss/custom.scss dist/css/custom.css"
+}
+Run with:
+npm run build-css
+
+
+
+
