@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>User Preferences</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 30px auto;
+        }
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        #status {
+            margin-top: 15px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<label for="preferredEvent">Select Your Preferred Event Type:</label>
+<select id="preferredEvent">
+    <option value="" disabled selected>Select an event</option>
+    <option value="cleanup">Community Cleanup</option>
+    <option value="festival">Art Festival</option>
+    <option value="fair">Food Fair</option>
+</select>
+
+<button id="clearPrefs">Clear Preferences</button>
+
+<div id="status"></div>
+
+<script>
+    const preferredEvent = document.getElementById('preferredEvent');
+    const clearPrefs = document.getElementById('clearPrefs');
+    const status = document.getElementById('status');
+
+    // On load, check localStorage and preselect
+    window.onload = () => {
+        const savedEvent = localStorage.getItem('preferredEvent');
+        if (savedEvent) {
+            preferredEvent.value
