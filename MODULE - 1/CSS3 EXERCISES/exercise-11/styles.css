@@ -1,0 +1,24 @@
+/* styles.css */
+
+body {
+  background-color: #f0f0f0;
+}
+
+#mainHeader {
+  font-size: 2rem;
+  text-align: center;
+  margin: 20px;
+}
+
+.testPara {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Media query example */
+@media (max-width: 600px) {
+  #mainHeader {
+    font-size: 1.2rem;
+    color: red;
+  }
+}
