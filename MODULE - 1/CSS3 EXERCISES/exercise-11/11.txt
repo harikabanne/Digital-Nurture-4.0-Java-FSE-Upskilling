@@ -1,0 +1,50 @@
+1. Use Chrome’s Device Toolbar to Simulate Screen Sizes
+Open your webpage in Google Chrome.
+
+Press F12 or right-click and select Inspect to open Developer Tools.
+
+Click the Toggle device toolbar button (icon that looks like a phone/tablet) or press Ctrl + Shift + M.
+
+This lets you switch between different device screen sizes or set custom sizes.
+
+Resize and observe how your site responds (especially your media queries).
+
+You can select from preset devices like iPhone, iPad, Galaxy, etc.
+
+2. Inspect Applied Styles and Test Different Values Live
+While in DevTools, select an element in the Elements tab.
+
+In the Styles pane, you can:
+
+See all CSS rules applied.
+
+Toggle rules on/off by checking/unchecking.
+
+Edit properties and see changes live.
+
+This helps debug problems like incorrect colors, missing styles, or wrong layout.
+
+3. Use Network Tab to Check External CSS Loading
+In DevTools, go to the Network tab.
+
+Reload the page (F5).
+
+Look for your CSS file (styles.css) in the list.
+
+Confirm it loads successfully (status 200) and no errors like 404.
+
+If CSS is not loading, the page will not style correctly — fix your file paths.
+
+How to test:
+Open in browser.
+
+Open DevTools.
+
+Toggle device toolbar.
+
+Resize window to less than 600px width and observe that the header text color changes to red and font size shrinks.
+
+Use the Styles pane to disable or modify properties to see changes live.
+
+Check the Network tab to confirm styles.css loads without errors.
+
